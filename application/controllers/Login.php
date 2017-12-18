@@ -24,6 +24,7 @@ class Login extends CI_Controller {
                     'nick' => $resultado->nick,
                     'nombre' => $resultado->nombres,
                     'correo' => $resultado->correo,
+                    'tipo' => $resultado->tipo,
                     'login' => true
                 );
                 $this->session->set_userdata($data);
