@@ -81,7 +81,6 @@ class Contenido_model extends CI_Model {
 
     function contenidoQry_ins() {
         $descripcion = null;
-        $contenido = null;
         $ruta_imagen = null;
         $link = null;
         $tamanio = null;
@@ -94,9 +93,6 @@ class Contenido_model extends CI_Model {
 
         if (isset($_POST['txtDescripcion'])) {
             $descripcion = $_POST['txtDescripcion'];
-        }
-        if (isset($_POST['txtContenido'])) {
-            $contenido = $_POST['txtContenido'];
         }
         if (isset($_POST['txtrutaimagen'])) {
             $ruta_imagen = $_POST['txtrutaimagen'];
@@ -127,7 +123,6 @@ class Contenido_model extends CI_Model {
         }
         $data = array(
             'descripcion' => $descripcion,
-            'contenido' => $contenido,
             'ruta_imagen' => $ruta_imagen,
             'link' => $link,
             'tamanio' => $tamanio,
@@ -148,8 +143,7 @@ class Contenido_model extends CI_Model {
             $editarID = $_POST['txtIdEditar'];
         }
 
-       $descripcion = null;
-        $contenido = null;
+        $descripcion = null;
         $ruta_imagen = null;
         $link = null;
         $tamanio = null;
@@ -162,9 +156,6 @@ class Contenido_model extends CI_Model {
 
         if (isset($_POST['txtDescripcion'])) {
             $descripcion = $_POST['txtDescripcion'];
-        }
-        if (isset($_POST['txtContenido'])) {
-            $contenido = $_POST['txtContenido'];
         }
         if (isset($_POST['txtrutaimagen'])) {
             $ruta_imagen = $_POST['txtrutaimagen'];
