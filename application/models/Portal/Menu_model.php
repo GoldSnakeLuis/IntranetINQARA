@@ -45,7 +45,6 @@ class Menu_model extends CI_Model {
         if (isset($_POST['usuario_id'])) {
             $idusuario = $_POST['usuario_id'];
         }
-        
         $this->db->select('v.*');
         $this->db->from('permisos p');
         $this->db->join('ventana v', 'p.ventana_id = v.id');

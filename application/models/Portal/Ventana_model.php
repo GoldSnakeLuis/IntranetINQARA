@@ -50,5 +50,5 @@ class Ventana_model extends CI_Model {
         $this->db->insert('ventana_detalle', $data);
         return $this->db->insert_id();
     }
-    
+  
 }

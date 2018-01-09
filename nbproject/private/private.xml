@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/models/Portal/Ventana_model.php</file>
-            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/controllers/Portal/Contenido.php</file>
-            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/models/Portal/Contenido_model.php</file>
+            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/controllers/Recursos/Usuarios.php</file>
+            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/models/Portal/Menu_model.php</file>
+            <file>file:/C:/xampp/htdocs/IntranetINQARA/application/models/Recursos/Permiso_model.php</file>
         </group>
     </open-files>
 </project-private>

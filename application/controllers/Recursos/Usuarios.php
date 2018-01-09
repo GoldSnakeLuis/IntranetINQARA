@@ -51,7 +51,7 @@ class Usuarios extends CI_Controller {
     }
 //-----------------------------------------------------PERMISOS ---------------------------------------------
     public function Permisos_listaxUsuario() {
-        $data = json_encode($this->Permiso_model->permisosQry_getxusuario());
+        $data = json_encode($this->Permiso_model->permisosQry_getxusuariovent());
         return print_r($data);
     }
 
@@ -62,7 +62,7 @@ class Usuarios extends CI_Controller {
             $data = $this->Permiso_model->permisoQry_ins();
         }
         
-        $data = json_encode($this->Permiso_model->permisosQry_getxusuario());
+        $data = json_encode($this->Permiso_model->permisosQry_getxusuariovent());
         return print_r($data);
     }
     

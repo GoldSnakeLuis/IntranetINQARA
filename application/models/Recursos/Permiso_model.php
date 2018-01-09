@@ -2,7 +2,7 @@
 
 class Permiso_model extends CI_Model {
 
-    function permisosQry_getxusuario() {
+    function permisosQry_getxusuariovent() {
         if (isset($_POST['usuario_id'])) {
             $idusuario = $_POST['usuario_id'];
         }
