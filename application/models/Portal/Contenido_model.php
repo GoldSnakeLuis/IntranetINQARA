@@ -79,7 +79,7 @@ class Contenido_model extends CI_Model {
         $this->db->update('contenido');
     }
 
-    function contenidoQry_ins() {
+    function contenidoQry_ins($imgNombre) {
         $descripcion = null;
         $ruta_imagen = null;
         $link = null;
@@ -93,9 +93,6 @@ class Contenido_model extends CI_Model {
 
         if (isset($_POST['txtDescripcion'])) {
             $descripcion = $_POST['txtDescripcion'];
-        }
-        if (isset($_POST['txtrutaimagen'])) {
-            $ruta_imagen = $_POST['txtrutaimagen'];
         }
         if (isset($_POST['txtlink'])) {
             $link = $_POST['txtlink'];
@@ -123,7 +120,7 @@ class Contenido_model extends CI_Model {
         }
         $data = array(
             'descripcion' => $descripcion,
-            'ruta_imagen' => $ruta_imagen,
+            'ruta_imagen' => $imgNombre,
             'link' => $link,
             'tamanio' => $tamanio,
             'fuenteletra' => $fuenteletra,
@@ -137,7 +134,7 @@ class Contenido_model extends CI_Model {
         return $this->db->insert_id();
     }
 
-    function contenidoQry_upd() {
+    function contenidoQry_upd($imgNombre) {
 
         if (isset($_POST['txtIdEditar'])) {
             $editarID = $_POST['txtIdEditar'];
@@ -156,9 +153,6 @@ class Contenido_model extends CI_Model {
 
         if (isset($_POST['txtDescripcion'])) {
             $descripcion = $_POST['txtDescripcion'];
-        }
-        if (isset($_POST['txtrutaimagen'])) {
-            $ruta_imagen = $_POST['txtrutaimagen'];
         }
         if (isset($_POST['txtlink'])) {
             $link = $_POST['txtlink'];
@@ -187,7 +181,6 @@ class Contenido_model extends CI_Model {
         $data = array(
             'descripcion' => $descripcion,
             'contenido' => $contenido,
-            'ruta_imagen' => $ruta_imagen,
             'link' => $link,
             'tamanio' => $tamanio,
             'fuenteletra' => $fuenteletra,
@@ -197,7 +190,9 @@ class Contenido_model extends CI_Model {
             'slider' => $slider,
             'informativo' => $informativo,
         );
-        
+        if (isset($_FILES['image']['name']) && $imgNombre != "") {
+            $data['ruta_imagen'] = $imgNombre;
+        }
         $this->db->where('id', $editarID);
         $this->db->update('contenido', $data);
     }
