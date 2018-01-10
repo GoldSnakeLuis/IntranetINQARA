@@ -116,7 +116,7 @@ class Contenido extends CI_Controller {
                 echo 'Invalido';
             }
         } else {
-            $data = $this->Contenido_model->contenidoQry_upd();
+            $data = $this->Contenido_model->contenidoQry_upd("");
         }
          return print_r($data);
     }
